@@ -86,7 +86,7 @@ run_toggler() {
   return 1
 }
 
-if grep -Eq '^(-h|--help)$' <<< "$@"
+if grep -Eq '^(-h|--help)$' <<< "$@" || test "$#" -eq 0
 then
   usage
   exit 0
